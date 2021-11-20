@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8">
+    
+
+    <style>
+      body {
+        background-color: #181818;
+      }
+      .container {
+        display: flex;
+        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        flex-direction: column;
+        align-items: center;
+        color: white;
+      }
+      .title {
+        text-align: center;
+      }
+      #hoursspan {
+        font-size: 50px;
+      }
+      .hours {
+        font-size: 25px;
+      }
+      .numericalTimer {
+        grid-column: 1;
+        grid-row: 1;
+        text-align: center;
+      }
+      .progressRing {
+        grid-column: 1;
+        grid-row: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .timer {
+        display: grid;
+      }
+      
+      /* .progressRing {
+        position: absolute;
+      } */
+    </style>
+  </head>
+
+  <body>
+    
+    <div class="container">
+      <div class="title">
+        You have been watching <br>
+          YouTube for:
+      </div>
+      <div class="timer">
+        
+        <progress-ring id="0" class="progressRing" color="rgb(255, 24, 24)" stroke="8" radius="100" progress="0"></progress-ring>
+        <progress-ring id="1" class="progressRing" color="rgb(190, 24, 24)"stroke="8" radius="90" progress="0"></progress-ring>
+        <progress-ring id="2"class="progressRing" color="rgb(150, 24, 24)"stroke="8" radius="80" progress="0"></progress-ring>
+        <progress-ring id="3"class="progressRing" color="rgb(100, 24, 24)"stroke="8" radius="70" progress="0"></progress-ring>
+        <progress-ring id="4"class="progressRing" color="rgb(50, 24, 24)"stroke="8" radius="60" progress="0"></progress-ring>
+        <div class="numericalTimer">
+          <br>
+          <span id="hoursspan">0</span> <br>
+          <span class="hours">Hours</span> <br>
+          <span id="minsecspan">0 mins and 0 secs</span>
+          
+        </div>
+      </div>
+    </div>
+
+    
+    <script src="ProgressRing.js"></script>
+    <script src="main.js"></script>
+  </body>
+
+</html>
